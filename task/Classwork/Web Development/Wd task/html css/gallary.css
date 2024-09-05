@@ -1,0 +1,7 @@
+.gallary {
+    display: grid;
+    grid-template-columns: repeat(12, 2fr);
+    grid-template-rows: repeat(4, 2fr);
+    grid-gap: 10px;
+    background-color: black;
+}

@@ -1,0 +1,123 @@
+To place the image on the right side and the login form on the left side, you can simply reorder the elements inside the `.container` div and adjust the flexbox properties if necessary. Here is the updated code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            background-color: blueviolet;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .input-container {
+            width: 40%;
+            padding: 20px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-container h1,
+        .input-container h2,
+        .input-container h3 {
+            text-align: center;
+        }
+
+        .input-container h1 u {
+            text-decoration: underline;
+        }
+
+        .input-container input[type="email"],
+        .input-container input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+
+        .input-container .fa {
+            position: relative;
+            top: 30px;
+            left: 10px;
+        }
+
+        .input-container .btn {
+            width: 100%;
+            padding: 15px;
+            background-color: rgb(102, 102, 248);
+            border: none;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        .input-container .btn:hover {
+            background-color: darkblue;
+        }
+
+        .input-container h3 {
+            margin-top: 10px;
+        }
+
+        .image-container {
+            width: 40%;
+            padding: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="input-container">
+                <h1><u>Login</u></h1>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Enter Your Email" name="email" id="email" required>
+                </div>
+                <div>
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Enter Your Password" name="password" id="pass" required>
+                </div>
+                <h2>Forgot Password</h2>
+                <button type="submit" class="btn">Login</button>
+                <h3>Don't have an account? Sign Up</h3>
+            </div>
+        </form>
+        <div class="image-container">
+            <img src="./mob.jpg" alt="Mobile Image">
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+### Explanation:
+1. **Element Order**: The order of the `.input-container` and `.image-container` is swapped in the `.container` div to place the image on the right.
+2. **Flexbox Layout**: The existing flexbox properties ensure that the elements are displayed side by side, with the form on the left and the image on the right.

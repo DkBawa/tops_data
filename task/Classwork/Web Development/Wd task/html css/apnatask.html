@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Task</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            border: 2px solid rgb(237, 252, 26);
+            border-radius: 50%;
+            display: inline-block;
+            margin: 1em;
+            transition: 2s;
+            transition-delay: 1s;
+            margin: 0 auto;
+            margin-top: 10px;
+            transition: margin-top 2s ease-in 0.2s;
+         }
+
+         li {
+            display:block;
+            border: 2px solid green;
+            background-color: burlywood;
+            width:20%;
+            padding: 5px 5px;
+            margin: 5px 5px;
+            text-align: center;
+
+         }
+         div:hover {
+            border-radius: 0px;
+            background-color: #4eee2a;
+            margin-top: 400px;
+        }
+        li:nth-of-type(2n) {
+            background-color: #4eee2a;
+        }
+
+        li:nth-of-type(3n) {
+            background-color: burlywood;
+        }
+        #one {
+            transform: rotate(45deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+    My Work
+    </div>
+    <div></div>
+    <div></div>
+    <ul>
+        <li id="one">HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>NodeJS</li>
+        <li>ReactJS</li>
+        <li>SQL</li>
+        <li>Mongo DB</li>
+        <li>Java</li>
+    </ul>
+
+</body>
+
+</html>

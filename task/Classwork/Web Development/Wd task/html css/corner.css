@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: rgb(222, 243, 202);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 50;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(21, 18, 16);
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 10px;
+    margin-top: -07px;
+
+    width: 100%;
+    position: fixed;
+}
+
+.logo {
+    font-size: xx-large;
+    color: rgb(240, 65, 7);
+    cursor: pointer;
+}
+
+.nav li {
+    display: inline-block;
+    text-decoration: none;
+    font-size: large;
+
+
+}
+
+.nav li a {
+    text-decoration: none;
+    padding-right: 15px;
+    color: rgb(222, 243, 202);
+    /* margin-left: 10px; */
+    cursor: pointer;
+}
+
+.icon {
+    font-size: large;
+    color: hsl(180, 48%, 95%);
+}
+.cart {
+    padding-left: 20px;
+     font-size: large;
+    color: hsl(180, 48%, 95%);
+    margin-left: 30x;
+}
+
+.log {
+    font-size: large;
+    color: hsl(180, 48%, 95%);
+}
+
+.Search {
+    font-size: large;
+    color: hsl(121, 71%, 41%);
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+}
+.Search:hover > .search-input{
+    width: 400px;
+    border: 2px solid yellowgreen;
+}
+
+.Search .search-input{
+    background: transparent;
+    border:none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+    color: rgb(222, 243, 202);
+
+}
+
+.Search .search-btn .fas{
+    color: hsl(23, 77%, 52%);
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+
+.Search:hover{
+  animation: hoverShake 0.15s linear 3;
+}
+
+.img {
+    display: block;
+    margin-left: 220px;
+    margin-right: 50px;
+    width: 50%;
+}
+#slideshow{
+    overflow: hidden;
+    max-height:fit-content;
+    max-width: fit-content;
+    margin: 20px;
+    padding-top: 20px;
+}
+.myslide {
+    margin-top: 45px;
+    float: left;
+    height: 100%;
+    width: 728px;
+}
+.slide-wrapper{
+    width: calc(728px * 4);
+    animation: slide 10s ease infinite;
+ }
+
+@keyframes slide {
+    20% {
+        margin-left: 0px;
+    }
+    40% {
+        margin-left: calc(-728px * 1);
+    }
+    100% {
+        margin-left: calc(-728px * 2);
+    }
+ 
+}
+@media only screen and (max-width:992px) {
+    body{
+        background: linear-gradient(rgb(166, 233, 134),rgb(244, 248, 4));
+        font-size: 30px;
+        width: 50%;
+    
+    }
+}
+.sec1{
+    display: inline-flex;
+}
+.container2{
+    width: 100%;
+    height: 50%;
+
+}
+.footer{
+   
+    background-color: aliceblue;
+}
+.footer_text{
+    font-style: italic;
+    font-size: larger;
+    align-items: center;
+    background-color: blanchedalmond;
+}

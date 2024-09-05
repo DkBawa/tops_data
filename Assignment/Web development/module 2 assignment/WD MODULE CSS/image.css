@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+max-width: 1224px;
+width: 90%;
+margin: auto;
+
+} 
+.title {
+    margin-bottom: 2rem;
+}
+.gallery{
+    display:grid;
+    gap: 10px;
+
+}
+.gallery .col-4{
+    display:flex;
+    flex-direction: column;
+   
+    columns: 4;
+
+}
+.photo img{
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    object-fit: cover;
+
+}

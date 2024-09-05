@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestes Table</title>
+</head>
+<body>
+    <center>
+       <table border="2"height="350px" width="750px">
+        <h1> Using TABLES in Websites</h1>
+        <h2> Caption Nested Table</h2>
+        <tr>
+            <td><b>Column 1</b></td>
+            <td colspan="3"style="text-align:center" ><b>Column 2</b></td>
+            
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: center;">Colspan Colman</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"rowspan="3">Rowspan Cell</td>
+        <td style="text-align: center;"colspan="3">Cell</td>
+    </tr>
+        <tr>
+    
+           
+          <td><table  border="2"cellpadding="35" cellspacing="10"    style="background-color: yellow;">
+            <tr>
+                    <td style="text-align: center;"><b>Inner Column Heading 1 </b></td>
+                    <td colspan="2" style="text-align: center;"><b>Inner Column Heading 2</b></td>
+                </tr>
+                <tr>
+                    <td style="background-color: blueviolet;">Inner Data Cell 1</td>
+                    <td style="background-color: chartreuse;"> <table border="2" style="background-color: hwb(308 5% 1% / 0.692);" cellspacing="10" cellpadding="35" >
+                        <tr>
+                            <td style="text-align: center;"><b>Inner Most Column Heading 1</b></td>
+                            <td style="text-align: center;"><b>Inner Most Column Heading 2</b></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: blue; text-align: center;">InnerMost Data Cell  1</td>
+                            <td style="background-color: orangered; center;">InnerMost Data Cell  2</td>
+                        </tr>
+                    </table> 
+                    </td>
+                </tr>
+            </table> </td>
+           </tr>
+          </center>
+    </table>
+</body>
+</html>

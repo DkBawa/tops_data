@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .continer{
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-auto-rows: 150px;
+                border: 2px solid black;
+               
+        }
+        .box{
+            border: 2px solid black;
+           
+        }
+        .box5{
+ grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+           }
+        .box2{
+         
+        }
+    </style>
+</head>
+<body>
+   <div class="continer">
+   <div class="box2">2</div>
+   <div class="box">3</div>
+   <div class="box">4</div>
+   <div class="box5">5</div>
+   <div class="box">6</div>
+   <div class="box">7</div>
+   <div class="box">8</div>
+   <div class="box">9</div>
+   <div class="box">10</div>
+   <div class="box">11</div>
+   <div class="box">12</div>
+   <div class="box">13</div>
+   <div class="box">14</div>
+   <div class="box">15</div>
+   <div class="box">16</div>
+   <div class="box">17</div>
+</div>
+   <grid></grid>
+</body>
+</html>

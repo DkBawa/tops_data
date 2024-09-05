@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<style>
+    body{
+        margin: 10px;
+        padding: 10px;
+        background-color: rgb(185, 231, 138);
+    }
+</style>
+<body style="border: 2px solid black;">
+    <table">
+        <caption>Student Information</caption><br><br>
+        <tr>
+            <th><input type="Text" placeholder="First Name"></th>
+            <th><input type="Text" placeholder="Middle Name"></th>
+            <th><input type="Text" placeholder="Last Name"></th><br><br>
+            <th><input type="date" placeholder="Date Of Birth"></th>
+            <th><input type="text" placeholder="Student ID"></th><br>
+        </tr><br>
+        <caption>Address</caption><br><br>
+        <tr>
+        <tr>
+            <th><input type="Text" placeholder="Street Address" style="width: 68%;"></th>
+        </tr><br><br>
+        <th><input type="Text" placeholder="City" style="width: 33%;"></th>
+        <th><input type="Text" placeholder="State/Provine" style="width: 33%;"></th><br><br>
+        <th><input type="Text" placeholder="Country" style="width: 33%;"></th>
+        <th><input type="Text" placeholder="Zip Code" style="width: 33%;"></th><br>
+        </tr><br>
+        <caption>Contact Information</caption><br><br>
+        <tr>
+            <th><input type="email" placeholder="Email" style="width: 33%;"></th>
+            <th><input type="Text" placeholder="" style="width: 33%;"></th> <br><br>
+
+            <caption>Courses</caption><br><br>
+        <tr>
+            <th><input type="button" value="+Add new record" style="width: 68%;"></th><br>
+            <th><select name="Course" id="Course">
+                    <option value="">Course</option>
+                    <option value="java">Java</option>
+                    <option value="Mern">Mern</option>
+                    <option value="Pythan">Pythan</option>
+                </select></th>
+            <th><select name="Level" id="Level">
+                    <option value="">Level</option>
+                    <option value="Level1">Level1</option>
+                    <option value="Level2">Level2</option>
+                    <option value="Level3">Level3</option>
+                </select></th>
+            <th><select name="lang" id="lang">
+                    <option value="">Language</option>
+                    <option value="Mongo">MongoDB</option>
+                    <option value="React">React</option>
+                    <option value="NodeJs">NodeJs</option>
+                </select></th>
+            <th><select name="Date" id="date">
+                    <option value="">Start Date</option>
+                    <option value="1-10">1-10</option>
+                    <option value="11-20">11-20</option>
+                    <option value="21-30">21-30</option>
+                </select></th>
+            <th><input type="text" style="width: 26%;"></th>
+            <br><br>
+            <th><textarea id="Comments" name="comments" rows="5" cols="68" width="68%" placeholder="Comments"></textarea></th>
+           <br>
+            <tr>
+            <th>
+                <button style="background-color: chocolate; width: 68%;" >Register </button>
+            </th>
+           </tr>
+        </table>
+</body>
+
+</html>
