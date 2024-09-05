@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+@media (max-width: 530px) {
+    .card {
+        width: 90%;
+    }
+}
