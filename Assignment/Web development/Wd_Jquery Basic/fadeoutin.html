@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Out Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    *{
+        background-color: greenyellow;
+    }
+.image-container {
+    display: flex;
+    gap: 10px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.fade {
+    opacity: 2;
+    transition: opacity 5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 10;
+}
+#fadeButton{
+    background-color: gold;
+    height: 30px;
+    width: 60px;
+}
+
+</style>
+
+<body>
+    <h1>Create Fade out using jQuery</h1>
+    <div class="image-container">
+        <img src="./img.jpg" alt="Flower 1" class="fade">
+        <img src="./img.jpg" alt="Flower 2" class="fade">
+        <img src="./img.jpg" alt="Flower 3" class="fade">
+    </div>
+    <button id="fadeButton">Show</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+$(document).ready(function() {
+    $('#fadeButton').click(function() {
+        $('.fade').each(function(index) {
+            $(this).delay(500 * index).fadeOut(1000);
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
