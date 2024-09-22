@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Interval</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Moment.js (for date calculations) -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <style>
+        .result-box {
+            background-color: #4A90E2;
+            color: rgb(248, 235, 235);
+            padding: 15px;
+            margin-top: 20px;
+            display: none;                      /* Initially hidden */
+        }
+        *{
+            background-color:green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="mt-4">Date Interval</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="fromDate">From:</label>
+                <input type="date" id="fromDate" class="form-control">
+            </div>
+            <div class="form-group mt-3">
+                <label for="toDate">To:</label>
+                <input type="date" id="toDate" class="form-control">
+            </div>
+            <button class="btn btn-primary mt-3" id="calculateBtn">Calculate</button>
+        </div>
+    </div>
+
+    <!-- Result display box -->
+    <div class="row result-box" id="resultBox">
+        <div class="col-md-12">
+            <h5 id="resultHeader"></h5>
+            <p id="resultYears"></p>
+            <p id="resultMonths"></p>
+            <p id="resultWeeks"></p>
+            <p id="resultDays"></p>
+        </div>
+    </div>
+</div>
+
+              <script>
+           $(document).ready(function(){
+                $("#calculateBtn").click(function(){
+        // Get the input values
+                 let fromDate = $("#fromDate").val();
+                 let toDate = $("#toDate").val();
+
+                 if (fromDate && toDate) {
+            // Convert the dates to moment.js objects
+                let start = moment(fromDate);
+                let end = moment(toDate);
+
+                // Calculate the differences
+                let years = end.diff(start, 'years');
+                let months = end.diff(start, 'months');
+                let weeks = end.diff(start, 'weeks');
+                let days = end.diff(start, 'days');
+
+            // Calculate exact months (ignoring years)
+            let monthsExact = months - (years * 12);
+
+            // Update the result box with the calculated values
+            $("#resultHeader").text(`Date interval between ${start.format("MM/DD/YYYY")} and ${end.format("MM/DD/YYYY")}`);
+            $("#resultYears").text(`In years: ${years}`);
+            $("#resultMonths").text(`In months: ${months}`);
+            $("#resultWeeks").text(`In weeks: ${weeks}`);
+            $("#resultDays").text(`In days: ${days}`);
+
+            // Show the result box
+            $("#resultBox").show();
+        } else {
+            alert("Please select both dates!");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
